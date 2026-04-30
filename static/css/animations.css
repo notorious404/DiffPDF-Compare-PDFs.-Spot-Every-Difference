@@ -1,0 +1,135 @@
+/* Animations */
+
+@keyframes auroraShift {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-45%, -55%) scale(1.1); }
+    100% { transform: translate(-55%, -45%) scale(0.9); }
+}
+
+@keyframes floatTop {
+    0%, 100% { transform: rotate(-5deg) translateY(0); }
+    50% { transform: rotate(-5deg) translateY(-10px); }
+}
+
+@keyframes floatBottom {
+    0%, 100% { transform: rotate(3deg) translateY(0); }
+    50% { transform: rotate(3deg) translateY(-10px); }
+}
+
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 10px rgba(108, 99, 255, 0.2); }
+    50% { box-shadow: 0 0 25px rgba(108, 99, 255, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(108, 99, 255, 0.2); }
+}
+
+@keyframes rippleEffect {
+    0% { transform: scale(0); opacity: 0.5; }
+    100% { transform: scale(4); opacity: 0; }
+}
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: rippleEffect 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes shimmerSweep {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.1) 50%, 
+        rgba(255,255,255,0) 100%);
+    background-size: 200% auto;
+    animation: shimmerSweep 3s infinite linear;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+@keyframes particleBurst {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--tx), var(--ty)) scale(0);
+        opacity: 0;
+    }
+}
+
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    pointer-events: none;
+    z-index: 100;
+}
+
+@keyframes ringDash {
+    0% {
+        stroke-dasharray: 1, 400;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 200, 400;
+        stroke-dashoffset: -100;
+    }
+    100% {
+        stroke-dasharray: 200, 400;
+        stroke-dashoffset: -340;
+    }
+}
+
+@keyframes indeterminateProgress {
+    0% {
+        transform: translateX(-100%);
+        width: 30%;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        transform: translateX(350%);
+        width: 30%;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes countUp {
+    from { content: "0"; }
+}
