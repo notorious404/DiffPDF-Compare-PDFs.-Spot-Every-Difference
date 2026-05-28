@@ -1,1 +1,110 @@
+# ==============================================================================
+# Repository Specifics (PDF Comparison Outputs / Test Artifacts)
+# ==============================================================================
+# Ignore any temporary PDF inputs or generated visual difference reports
+*.pdf
+!/tests/sample_data/*.pdf  # Un-ignore specific sample PDFs needed for tests if any
+*.png
+*.jpg
+*.jpeg
+/output/
+/diff_results/
+/temp/
+/tmp/
 
+# ==============================================================================
+# Python Environment & Caching
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+active_env/
+pip-log.txt
+pip-delete-this-directory.txt
+.toast
+.spyderproject
+.spyproject
+.ropeproject
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+.poetry/
+poetry.lock
+
+# ==============================================================================
+# Node / JavaScript (If UI or tool uses Node.js)
+# ==============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.eslintcache
+.next/
+out/
+build/
+dist/
+
+# ==============================================================================
+# Environment Variables & Secrets (CRITICAL SECURITY)
+# ==============================================================================
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.secret
+
+# ==============================================================================
+# IDEs and Text Editors
+# ==============================================================================
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+.factorypath
+.project
+.settings/
+
+# JetBrains (PyCharm, WebStorm, etc.)
+.idea/
+
+# General editor backups
+*.swp
+*.swo
+*~
+
+# ==============================================================================
+# Operating System Garbage
+# ==============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.Trashes
+VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
