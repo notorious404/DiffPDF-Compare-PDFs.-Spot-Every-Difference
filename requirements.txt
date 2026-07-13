@@ -1,8 +1,6 @@
-streamlit==1.40.0
 flask==3.0.0
 gunicorn==22.0.0
 google-genai
 PyPDF2==3.0.1
 reportlab==4.2.2
 python-dotenv==1.0.1
-pandas==2.2.2
