@@ -34,7 +34,7 @@ This project is licensed under the MIT License.
 - **Python**
 - **Streamlit** – Interactive web interface
 - **Pandas** – Data handling and comparison
-- **OpenAI API** – Intelligent difference analysis
+- **Gemini API** – Intelligent difference analysis
 - **ReportLab** – PDF comparison report generation
 
 ---
@@ -89,7 +89,7 @@ This project is licensed under the MIT License.
 
 -Create a .env file and add:
 
--OPENAI_API_KEY=your_api_key_here
+-GEMINI_API_KEY=your_api_key_here
 
 ## 📌 Limitations
 
